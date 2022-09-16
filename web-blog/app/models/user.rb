@@ -6,7 +6,7 @@ class User < ApplicationRecord
          # :confirmable, :trackable
 
   # relation
-  has_many :comments
-  has_many :posts
+  has_many :comments, dependent: :destroy
+  has_many :posts, dependent: :destroy
 
 end

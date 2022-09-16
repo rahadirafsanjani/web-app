@@ -10,7 +10,29 @@
 </div>
 <br/>
 <div>
-  <%= render 'comments/comment', comment: @comment %>
-  <%= render 'comments/form', comment: @comment %>
-</div>
 
+<!--  all coment here -->
+<!--  <h2>-->
+<!--    Comment here-->
+<!--  </h2>-->
+<!--  <h4>-->
+    <%#= current_user.email %>
+<!--  </h4>-->
+  <%#= render @post.comments %>
+<!--  <p>-->
+    <%#= @post.comments.last.created_at.strftime("%B %d %Y, %l:%M%P") %>
+<!--  </p>-->
+  <%#= render 'comments/comment', comment: @comment %>
+  <%#= render 'comments/form', comment: @comment %>
+<!--</div>-->
+
+  <div class="card">
+    <h5 class="card-header"><%= current_user.email %></h5>
+    <div class="card-body">
+      <h5 class="card-title"><%= @post.comments.last.created_at.strftime("%B %d %Y, %l:%M%P") %></h5>
+      <p class="card-text"><%= render @post.comments %></p>
+      <%= render 'comments/comment', comment: @comment %>
+      <%= render 'comments/form', comment: @comment %>
+    </div>
+  </div>
+</div>

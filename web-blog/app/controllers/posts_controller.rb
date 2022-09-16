@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   def show
     #adding comment
     @comment = Comment.new
+
   end
 
   # GET /posts/new

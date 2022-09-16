@@ -5,6 +5,10 @@ class CommentsController < ApplicationController
     @comment = Comment.new
   end
 
+  def show
+
+  end
+
   def create
     @post = Post.find(params[:post_id])
     Comment.create(comment_params.merge(post_id: params[:post_id],user_id: current_user.id ))
